@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <h1 class="title">Tic Tac Toe</h1>
+
+      <section class="controls" aria-label="Game controls">
+        <div class="control-group">
+          <label for="mode">Mode</label>
+          <select id="mode" aria-label="Game mode">
+            <option value="cpu">Vs Computer</option>
+            <option value="pvp">Two Players</option>
+          </select>
+        </div>
+
+        <div class="control-group" id="sidePicker">
+          <label for="playerMark">You play as</label>
+          <select id="playerMark" aria-label="Player mark">
+            <option value="X">X (first)</option>
+            <option value="O">O (second)</option>
+          </select>
+        </div>
+
+        <button id="newGame" class="primary" aria-label="Start a new game">New Game</button>
+      </section>
+
+      <section id="statusText" class="status" aria-live="polite">Player X’s turn</section>
+
+      <section id="board" class="board" role="grid" aria-label="Tic Tac Toe board">
+        <button class="cell" role="gridcell" aria-label="Cell 1" data-index="0"></button>
+        <button class="cell" role="gridcell" aria-label="Cell 2" data-index="1"></button>
+        <button class="cell" role="gridcell" aria-label="Cell 3" data-index="2"></button>
+        <button class="cell" role="gridcell" aria-label="Cell 4" data-index="3"></button>
+        <button class="cell" role="gridcell" aria-label="Cell 5" data-index="4"></button>
+        <button class="cell" role="gridcell" aria-label="Cell 6" data-index="5"></button>
+        <button class="cell" role="gridcell" aria-label="Cell 7" data-index="6"></button>
+        <button class="cell" role="gridcell" aria-label="Cell 8" data-index="7"></button>
+        <button class="cell" role="gridcell" aria-label="Cell 9" data-index="8"></button>
+      </section>
+
+      <footer class="footer">
+        <span>Keyboard: Tab to a cell, press Enter/Space to place a mark.</span>
+      </footer>
+    </main>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
