@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Grocery Price Finder</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1>Grocery Price Finder</h1>
+        <p class="subtitle">Search an item to find the lowest price across stores</p>
+      </header>
+
+      <section class="search">
+        <div class="search-row">
+          <input id="searchInput" type="search" inputmode="search" placeholder="Try: milk, eggs, bread, bananas…" aria-label="Search for a grocery item" autocomplete="off" />
+          <button id="clearBtn" class="btn btn-secondary" aria-label="Clear search">Clear</button>
+        </div>
+        <div class="chips" id="suggestions">
+          <button class="chip" data-q="milk">milk</button>
+          <button class="chip" data-q="eggs">eggs</button>
+          <button class="chip" data-q="bread">bread</button>
+          <button class="chip" data-q="bananas">bananas</button>
+          <button class="chip" data-q="rice">rice</button>
+          <button class="chip" data-q="chicken">chicken</button>
+        </div>
+      </section>
+
+      <section id="status" class="status" aria-live="polite"></section>
+
+      <section id="cheapestSection" class="cheapest-section hidden">
+        <h2>Cheapest options</h2>
+        <div id="cheapestList" class="cards"></div>
+      </section>
+
+      <section id="offersSection" class="offers-section hidden">
+        <h2>All offers</h2>
+        <div class="table-wrap">
+          <table class="offers-table" aria-describedby="status">
+            <thead>
+              <tr>
+                <th>Item</th>
+                <th>Store</th>
+                <th class="num">Price</th>
+                <th>Unit</th>
+              </tr>
+            </thead>
+            <tbody id="offersBody"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <small>Demo dataset. Prices are illustrative only.</small>
+      </footer>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
